@@ -17,16 +17,14 @@ export default function Home() {
     getVoice();
   }, []);
 
-  const keyDownHandler = useCallback(async (event) => {
-    if (event.repeat) {
-      return;
-    }
+  const addVoice = useCallback(async () => {
     const addedVoice = await fetchVoice();
     setVoice((prevVoice) => `${prevVoice} ${addedVoice}`);
   }, []);
 
   useEffect(() => {
-    window.addEventListener('keydown', keyDownHandler);
+    window.addEventListener('keydown', addVoice);
+    window.addEventListener('touchstart', addVoice);
   }, []);
 
   return (
@@ -39,7 +37,7 @@ export default function Home() {
       <div id="voice-container">
         <textarea readOnly value={voice} />
       </div>
-      <p>Press spacebar for more words from God.</p>
+      <p>Press any key (or tap screen) for more words from God.</p>
       <style global jsx>{`
         body {
           margin: 0;
