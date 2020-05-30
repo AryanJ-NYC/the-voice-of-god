@@ -1,0 +1,12 @@
+{
+  "name": "The Voice of God",
+  "short_name": "Voice of God",
+  "background_color": "#55ffff",
+  "description": "Messages directly from God.",
+  "icons": [
+    { "src": "https://templeos.org/favicon.ico", "sizes": "32x32", "type": "image/ico" },
+    { "src": "https://templeos.org/Logo128x152.jpg", "sizes": "128x152", "type": "image/jpg" }
+  ],
+  "start_url": ".",
+  "theme_color": "#aa00aa"
+}

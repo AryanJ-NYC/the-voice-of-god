@@ -32,6 +32,7 @@ export default function Home() {
       <Head>
         <title>The Voice of God</title>
         <link rel="icon" href="https://templeos.org/favicon.ico" />
+        <link rel="manifest" href="./manifest.json"></link>
       </Head>
       <h1>The Voice of God</h1>
       <div id="voice-container">
